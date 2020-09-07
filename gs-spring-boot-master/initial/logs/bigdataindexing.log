@@ -1,0 +1,111 @@
+2020-04-13 13:00:35.400  WARN 406 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error connecting to node 10.0.0.20:9092 (id: 0 rack: null)
+
+java.net.SocketException: Network is unreachable
+	at sun.nio.ch.Net.connect0(Native Method) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:454) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:446) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648) ~[na:1.8.0_202-ea]
+	at org.apache.kafka.common.network.Selector.doConnect(Selector.java:280) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.common.network.Selector.connect(Selector.java:258) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.initiateConnect(NetworkClient.java:945) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.access$600(NetworkClient.java:68) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1114) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1005) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:537) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:335) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:244) [kafka-clients-2.3.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202-ea]
+
+2020-04-13 13:00:35.580  WARN 406 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error connecting to node 10.0.0.20:9092 (id: 0 rack: null)
+
+java.net.SocketException: Network is unreachable
+	at sun.nio.ch.Net.connect0(Native Method) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:454) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:446) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648) ~[na:1.8.0_202-ea]
+	at org.apache.kafka.common.network.Selector.doConnect(Selector.java:280) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.common.network.Selector.connect(Selector.java:258) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.initiateConnect(NetworkClient.java:945) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.access$600(NetworkClient.java:68) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1114) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1005) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:537) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:335) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:244) [kafka-clients-2.3.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202-ea]
+
+2020-04-13 13:00:35.843  WARN 406 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error connecting to node 10.0.0.20:9092 (id: 0 rack: null)
+
+java.net.SocketException: Network is unreachable
+	at sun.nio.ch.Net.connect0(Native Method) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:454) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:446) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648) ~[na:1.8.0_202-ea]
+	at org.apache.kafka.common.network.Selector.doConnect(Selector.java:280) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.common.network.Selector.connect(Selector.java:258) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.initiateConnect(NetworkClient.java:945) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.access$600(NetworkClient.java:68) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1114) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1005) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:537) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:335) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:244) [kafka-clients-2.3.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202-ea]
+
+2020-04-13 13:00:36.239  WARN 406 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error connecting to node 10.0.0.20:9092 (id: 0 rack: null)
+
+java.net.SocketException: Network is unreachable
+	at sun.nio.ch.Net.connect0(Native Method) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:454) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:446) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648) ~[na:1.8.0_202-ea]
+	at org.apache.kafka.common.network.Selector.doConnect(Selector.java:280) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.common.network.Selector.connect(Selector.java:258) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.initiateConnect(NetworkClient.java:945) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.access$600(NetworkClient.java:68) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1114) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1005) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:537) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:335) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:244) [kafka-clients-2.3.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202-ea]
+
+2020-04-13 13:00:36.923  WARN 406 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error connecting to node 10.0.0.20:9092 (id: 0 rack: null)
+
+java.net.SocketException: Network is unreachable
+	at sun.nio.ch.Net.connect0(Native Method) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:454) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:446) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648) ~[na:1.8.0_202-ea]
+	at org.apache.kafka.common.network.Selector.doConnect(Selector.java:280) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.common.network.Selector.connect(Selector.java:258) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.initiateConnect(NetworkClient.java:945) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.access$600(NetworkClient.java:68) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1114) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1005) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:537) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:335) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:244) [kafka-clients-2.3.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202-ea]
+
+2020-04-13 13:00:37.785  WARN 406 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Error connecting to node 10.0.0.20:9092 (id: 0 rack: null)
+
+java.net.SocketException: Network is unreachable
+	at sun.nio.ch.Net.connect0(Native Method) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:454) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.Net.connect(Net.java:446) ~[na:1.8.0_202-ea]
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:648) ~[na:1.8.0_202-ea]
+	at org.apache.kafka.common.network.Selector.doConnect(Selector.java:280) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.common.network.Selector.connect(Selector.java:258) ~[kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.initiateConnect(NetworkClient.java:945) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.access$600(NetworkClient.java:68) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1114) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient$DefaultMetadataUpdater.maybeUpdate(NetworkClient.java:1005) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:537) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.runOnce(Sender.java:335) [kafka-clients-2.3.1.jar:na]
+	at org.apache.kafka.clients.producer.internals.Sender.run(Sender.java:244) [kafka-clients-2.3.1.jar:na]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_202-ea]
+
+2020-04-13 16:23:16.711  INFO 406 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2020-04-13 16:23:16.761  INFO 406 --- [RMI TCP Connection(2)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-13 16:23:16.765  INFO 406 --- [RMI TCP Connection(2)-127.0.0.1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.

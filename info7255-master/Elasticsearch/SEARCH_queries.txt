@@ -1,0 +1,158 @@
+GET plan/_search
+{
+  "query":{
+    "match": {
+      "objectId": "12xvxc345ssdsds-508"
+    }
+  }
+}
+
+#Simple match query
+GET plan/_search
+{
+  "query":{
+    "nested": {
+        "path": "linkedPlanServices.linkedService",
+        "query": {
+          "match": {
+            "linkedPlanServices.linkedService.name": "Monthly test"
+          }
+          
+        }
+    }
+  }
+}
+
+#Join Query
+GET plan/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+            "nested" : {
+                "path" : "linkedPlanServices.linkedService",
+                "query" : {
+                    "bool" : {
+                        "must" : [{ "match" : {"linkedPlanServices.linkedService.objectId" : "1234520xvc30sfs-505"}
+                          
+                        }]
+                    }
+                }
+            }
+        },
+        {"match_phrase":{"objectId":"12xvxc345ssdsds-508"} }
+        
+      ]
+    }
+  }
+}
+
+#Simple match query
+GET plan/_search
+{
+  "query":{
+    "nested": {
+        "path": "linkedPlanServices.planserviceCostShares",
+        "query": {
+          "match": {
+           "linkedPlanServices.planserviceCostShares._org": "example.com"
+         }
+        }
+    }
+  }
+}
+
+#Wildcard query
+GET plan/_search
+{
+  "query":{
+    "nested": {
+        "path": "linkedPlanServices.linkedService",
+        "query": {
+          "wildcard": {
+           "linkedPlanServices.linkedService.name": "yearly*"
+         }
+        }
+    }
+  }
+}
+
+#Range Query
+GET plan/_search
+{
+  "query": {
+      "nested": {
+        "path": "linkedPlanServices.planserviceCostShares",
+         "query":        
+         {"range": {
+            "linkedPlanServices.planserviceCostShares.deductible": {
+            "gte": 10
+        }
+      }}
+    }}
+}
+
+#Multiple queries
+GET plan/_search
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "nested": {
+            "path": "linkedPlanServices.planserviceCostShares",
+             "query":        
+             {
+               "range": {
+                "linkedPlanServices.planserviceCostShares.copay": {
+                "gte": 400
+            }
+          }}
+        }},
+        {
+          "nested": {
+            "path": "linkedPlanServices.planserviceCostShares",
+             "query":        
+             {
+               "range": {
+                "linkedPlanServices.planserviceCostShares.deductible": {
+                "gte": 10
+            }
+          }}
+        }}
+      ]
+  }}
+}
+
+#Negative Query
+GET plan/_search
+{
+  "query": {
+    "bool": {
+      "must_not": [
+        {
+          "nested": {
+            "path": "linkedPlanServices.planserviceCostShares",
+             "query":        
+             {
+               "range": {
+                "linkedPlanServices.planserviceCostShares.copay": {
+                "gte": 1000
+            }
+          }}
+        }},
+        {
+          "nested": {
+            "path": "linkedPlanServices.planserviceCostShares",
+             "query":        
+             {
+               "range": {
+                "linkedPlanServices.planserviceCostShares.deductible": {
+                "gte": 1000
+            }
+          }}
+        }}
+      ]
+  }}
+}
